@@ -18,13 +18,13 @@ class ResultOcrViewController: UIViewController {
 
     
     override func viewDidLoad() {
-        // 文字の背景色を白色に
+        // 文字の背景色を白色、文字を黒色
         textView.backgroundColor = UIColor.white
         textView.textColor = UIColor.black
         // 渡ってきた値をセット
         self.textView.text = self.recognizedStrings
         self.imageView.image = self.selectedUIImage
-        
+        // 画面表示
         super.viewDidLoad()
     }
 

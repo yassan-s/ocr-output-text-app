@@ -54,6 +54,7 @@ class ExecuteOcrViewController: UIViewController {
         }
         
         // 画像の表示処理
+        // 別メソッドとして分けたい
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let resultOcrVC =  storyboard.instantiateViewController(withIdentifier: "resultOcr") as? ResultOcrViewController {
             
@@ -88,13 +89,6 @@ class ExecuteOcrViewController: UIViewController {
         
         // 解析結果をTextViewにセット
         self.recognizedStrings = recognizedText
-    }
-    
-    /**
-     * 結果への画面遷移
-     */
-    func recognizeTextHandler(request: VNRequest, error: Error?) {
-        
     }
 
 }
